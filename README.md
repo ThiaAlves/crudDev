@@ -13,18 +13,54 @@ Seguem os atributos da tabela:
 5. Hobbie;
 
 ## Configuração do projeto para execução
+
+
+### EXECUÇÂO DIRETA
+
+1) Clone esse repositório para a sua máquina:
+```git clone https://github.com/ThiaAlves/crudDev.git```
+
+2) Instale as dependências necessárias para execução do projeto
+```composer install```
+```npm install```
+
+3) Defina as configurações de conexão ao banco de dados no arquivo .env
+```
+DB_CONNECTION=mysql
+DB_HOST=localhost
+DB_PORT=3306
+DB_DATABASE=crudDev
+DB_USERNAME=username
+DB_PASSWORD=password
+```
+4) Importar o banco de dados:
+```php artisan migrate```
+
+5) Gerar a chave para execução do projeto:
+```php artisan key:generate
+
+6) Abra dois terminais e execute os comandos simultaneamente:
+```npm run watch```
+```php artisan serve```
  
-### DOCKER
-O projeto utiliza Docker e Docker Compose para criação do ambiente de desenvolvimento.
+ 
+### EXECUÇÂO EM DOCKER
+O projeto utiliza Docker e Docker Compose como padrão para criação do ambiente de desenvolvimento.
 
 ### Build e execução dos containers Docker
 Observação: A configuração do docker-compose.yml foi configurado para ser executado 
-em uma máquina linux.
+em uma máquina linux, em execuções no windows será necessário fazer alguns ajustes.
 
-Para construir a imagem do app
+1) Clone esse repositório para a sua máquina:
+```git clone https://github.com/ThiaAlves/crudDev.git```
+
+2) Copie o arquivo .env.example para o diretorio do projeto com o comando:
+```cp .env.example .env```
+
+3) Para construir a imagem do app
 ```docker-compose build app```
 
-Para iniciar os containers do app
+4) Para iniciar os containers do app
 ```docker-compose up -d```
 
 ### Para ver os containers rodando
