@@ -40,6 +40,7 @@ DB_PASSWORD=password
 ```php artisan key:generate
 
 6) Abra dois terminais e execute os comandos simultaneamente:
+
 ```npm run watch```
 ```php artisan serve```
  
