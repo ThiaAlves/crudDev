@@ -37,7 +37,7 @@ DB_PASSWORD=password
 ```php artisan migrate```
 
 5) Gerar a chave para execução do projeto:
-```php artisan key:generate
+```php artisan key:generate```
 
 6) Abra dois terminais e execute os comandos simultaneamente:
 
